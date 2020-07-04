@@ -21,7 +21,7 @@ public class SynchronizedDemo {
         Thread t7 = new Thread(r,"Thread-3");
         Thread t8 = new Thread(r,"Thread-4");
         Thread t9 = new Thread(r,"Thread-5");
-
+        t5.setPriority(1);
         t5.start();
         t6.start();
         t7.start();

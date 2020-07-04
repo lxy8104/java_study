@@ -23,9 +23,11 @@ public class DemoLock2 {
         Runnable r2 = ()->{
           synchronized ("B"){
               System.out.println("B线程持有B锁，等待A锁");
+
               synchronized("A"){
-                  System.out.println("B线程同时持有A和B锁");
                   "A".notify();
+                  System.out.println("B线程同时持有A和B锁");
+//                  "A".notify();
                   //"A".notifyAll();
               }
           }

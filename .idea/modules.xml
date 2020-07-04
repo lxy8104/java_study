@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/java-study/java-study.iml" filepath="$PROJECT_DIR$/java-study/java-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaProgram.iml" filepath="$PROJECT_DIR$/javaProgram.iml" />
-      <module fileurl="file://$PROJECT_DIR$/leetcodeTest/leetcodeTest.iml" filepath="$PROJECT_DIR$/leetcodeTest/leetcodeTest.iml" />
     </modules>
   </component>
 </project>

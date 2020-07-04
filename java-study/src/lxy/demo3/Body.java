@@ -1,6 +1,9 @@
 package lxy.demo3;
 
- class Body {
+import java.util.LinkedList;
+import java.util.Optional;
+
+class Body {
 
      private String name;
 
@@ -52,5 +55,7 @@ package lxy.demo3;
          Body.Heart hhh  = new Body().new Heart();
          hhh.setName("zzz");
          hhh.beat();
+         LinkedList<Integer> res = new LinkedList<>();
+
      }
 }

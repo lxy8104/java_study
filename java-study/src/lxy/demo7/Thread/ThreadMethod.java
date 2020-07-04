@@ -4,11 +4,15 @@ public class ThreadMethod {
     public static void main(String[] args) {
         threadYield();
 
+        //threadPriority();
+
         System.out.println("main线程结束");
 
     }
 
+    //线程礼让
     public static void threadYield() {
+        //线程礼让 指的是让当前的运行状态的线程释放自己的CPU资源 由运行状态 回到就绪状态
         Runnable r = new Runnable() {
             @Override
             public void run() {
@@ -29,18 +33,16 @@ public class ThreadMethod {
 
 
     }
-
+    //线程优先级
     public static void threadPriority() {
         //设置线程的优先级，只是修改这个线程可以去抢CPU时间片的概率
         //并不是优先级高的线程一定能抢到CPU时间片
         //优先级的设置，是一个整数 [0 , 10]的整数，默认是5
-        Runnable r = new Runnable() {
-            @Override
-            public void run() {
+        Runnable r = ()-> {
                 for (int i = 0; i < 100; i++) {
                     System.out.println(Thread.currentThread().getName() + ":" +i);
                 }
-            }
+
         };
 
         Thread t1 = new Thread(r, "Thread-1");
@@ -54,7 +56,7 @@ public class ThreadMethod {
 
     }
 
-
+    //线程命名
     public static void threadNamed() {
         Thread t = new Thread();
         System.out.println(t.getName());
