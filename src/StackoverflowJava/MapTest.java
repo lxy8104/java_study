@@ -95,7 +95,7 @@ public class MapTest {
         map3.put(new Person("刘杨", 19), 4);
 
         map3.forEach((p, v) -> {
-            System.out.println("Person" + p + "编号为" + v);
+            System.out.println("Person" + p + "编号是" + v);
         });
 
         Map<Person, Integer> map4 = new HashMap<Person, Integer>();
