@@ -23,10 +23,19 @@ public class filterEmployee {
         return employees;
     }
 
+
+
     public static void main(String[] args) {
+        System.out.println("根据年龄筛选");
         List<Employee> list = filterEmployee(employees,new FilterEmployeeByAge());
         for (Employee e : list) {
             System.out.println(e);
         }
+        System.out.println("根据工资筛选");
+        List<Employee> list2 = filterEmployee(employees,new FilterEmployeeBySalary());
+        for (Employee e : list2) {
+            System.out.println(e);
+        }
     }
 }
+

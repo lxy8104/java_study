@@ -31,6 +31,10 @@ class Employee{
         this.salary = salary;
     }
 
+    public double getSalary() {
+        return salary;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -46,7 +50,14 @@ public class FilterEmployeeByAge implements MyPredicate<Employee> {
     public boolean filter(Employee e) {
         return e.getAge()>=30;
     }
+}
 
+class FilterEmployeeBySalary implements MyPredicate<Employee> {
+
+    @Override
+    public boolean filter(Employee e) {
+        return e.getSalary()>=5000;
+    }
 }
 
 
